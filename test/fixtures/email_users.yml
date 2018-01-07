@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+kugyu10:
+  email: kugyu10@gmail.com
+  password_digest: <%= EmailUser.digest('password') %>
+  user: kugyu10
+
+flow_statter:
+  email: flow_statter@gmail.com
+  password_digest: <%= EmailUser.digest('password') %>
+  user: flow_statter

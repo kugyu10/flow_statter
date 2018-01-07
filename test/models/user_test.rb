@@ -13,10 +13,10 @@ class UserTest < ActiveSupport::TestCase
     assert @user.valid?
   end
   
-  test "twitter_id should be present" do
-    @user.twitter_id = '    '
-    assert_not @user.valid?
-  end
+  #test "twitter_id should be present" do
+  #  @user.twitter_id = '    '
+  #  assert_not @user.valid?
+  #end
   
   test "nickname should be present" do
     @user.nickname = '    '

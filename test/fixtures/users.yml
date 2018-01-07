@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  twitter_id: MyString
-  nickname: MyString
-  provider: MyString
-  uid: MyString
-  image_url: MyString
+kugyu10:
+  twitter_id: 
+  nickname: kugyu10
+  provider: twitter
+  uid: 12345678
+  image_url: test.jpg
 
-two:
-  twitter_id: MyString
-  nickname: MyString
-  provider: MyString
-  uid: MyString
-  image_url: MyString
+flow_statter:
+  twitter_id: 
+  nickname: flow_statter
+  provider: twitter
+  uid: 12345679
+  image_url: test.jpg
