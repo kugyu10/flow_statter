@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  plan: one
+  user: one
+  participater_name: MyString
+  number_of_unit: 1
+
+two:
+  plan: two
+  user: two
+  participater_name: MyString
+  number_of_unit: 1

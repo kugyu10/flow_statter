@@ -1,0 +1,12 @@
+<% @current_participation = Participation.new if @current_participation == nil %>
+<div class="col-sm-6">
+<%= form_for(@current_participation) do |f| %>
+  <%= f.label :number_of_unit %>
+  <%= f.text_field :number_of_unit %>
+
+  <%= f.label :participater_name %>
+  <%= f.text_field :participater_name %>
+
+  <%= f.submit "参加状態を変更する", class: "btn btn-primary" %>
+<% end %>
+</div>

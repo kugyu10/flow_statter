@@ -13,7 +13,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", root_path, count: 2
     assert_select "a[href=?]", help_path
     assert_select "a[href=?]", about_path
-    assert_select "a[href=?]", users_new_path
+    # assert_select "a[href=?]", users_new_path
     assert_select "a[href=?]", '/auth/twitter'
     # assert_select "a[href=?]", setting_path
   end

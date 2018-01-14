@@ -1,9 +1,37 @@
 <div class="row">
   <h1>Plans#show</h1>
   <div class="col-md-6 col-md-offset-3">
+    <h2>プラン</h2>
     <div class="row">plan_id:<%= @plan.id %>,</div>
-    <div class="row">plan:<%= @plan.content %>,</div>
-    <div class="row">planner:<%= @plan.user.nickname %>,</div>
-    <div class="row">date:<%= @plan.event_date %></div>
+    <div class="row">プラン内容:<%= @plan.content %>,</div>
+    <div class="row">開催日:<%= @plan.event_date %></div>
+    <h2>主催</h2>
+      <ul class="participations">
+      <li>
+        <%= image_tag(@plan.user.image_url, options={ size:50}) %>
+        <%= link_to "@#{@plan.user.nickname}", @plan.user %>
+      </li>
+      </ul>
+    <h2>参加者一覧</h2>
+    <ul class="participations">
+      <% @participations.each do |participation| %>
+      <li>
+        <%= image_tag(participation.user.image_url, options={ size:50}) %>
+        <%= link_to "@#{participation.user.nickname}", participation.user %> - 
+        <%= participation.participater_name %>
+      </li>
+      <% end %>
+    </ul>
+    <h2>参加</2>
+    <div class="row">
+    <% if logged_in? %>
+      <%= link_to '参加する', '#', class: "btn btn-primary" %>
+      <%= link_to '参加しない', '#', class: "btn btn-secondary" %>
+      <p></p>
+      <%= render 'participation_form' %>
+    <% else %>
+      （参加状態を変更するにはログインして下さい）
+    <% end %>
+    <div>
   </div>
 </div>

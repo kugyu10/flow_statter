@@ -3,18 +3,18 @@
     <%= link_to "ふらすたった〜", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Help", help_path %></li>
-        <li><%= link_to "Setting", "#" %></li>
+        <li><%= link_to "ほーむ", root_path %></li>
+        <li><%= link_to "へるぷ", help_path %></li>
+        <li><%= link_to "新規プラン", "/plans/new" %></li>
 
         <% if logged_in? %>
+          <li><%= image_tag(current_user.image_url, options={ size: 50}) %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               Account<b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Settings", '#' %></li>
+              <li><%= link_to "Account", current_user %></li>
               <li class="divider"></li>
               <li><%= link_to 'ログアウト', logout_path %></li>
             </ul>

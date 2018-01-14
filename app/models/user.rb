@@ -1,6 +1,7 @@
 class User < ApplicationRecord
 has_many :plans
-has_many :email_user
+has_many :email_users
+has_many :participations
 
   # validation
   # validates :twitter_id, presence:true

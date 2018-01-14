@@ -11,7 +11,10 @@ class PlansController < ApplicationController
   end
   
   def show
+    @user = current_user
     @plan = Plan.find(params[:id])
+    @participations = Participation.where(plan_id: @plan.id)
+    @current_participation = @participations.find_by(user_id: @user.id)
   end
   
   def create
@@ -24,6 +27,11 @@ class PlansController < ApplicationController
       render 'new'
     end
   end
+  
+  def index
+    @plans = Plan.all
+  end
+  
   
   private 
   

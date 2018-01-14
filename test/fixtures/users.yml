@@ -5,11 +5,11 @@ kugyu10:
   nickname: kugyu10
   provider: twitter
   uid: 12345678
-  image_url: test.jpg
+  image_url: http://pbs.twimg.com/profile_images/945261058465325056/pMlvPyhp_normal.jpg
 
 flow_statter:
   twitter_id: 
   nickname: flow_statter
   provider: twitter
   uid: 12345679
-  image_url: test.jpg
+  image_url: http://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png
