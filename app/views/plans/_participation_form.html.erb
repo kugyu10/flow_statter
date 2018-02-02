@@ -6,7 +6,10 @@
 
   <%= f.label :participater_name %>
   <%= f.text_field :participater_name %>
+  
+  <%= f.hidden_field :plan_id, :value => @plan.id %>
 
-  <%= f.submit "参加状態を変更する", class: "btn btn-primary" %>
+  <%= f.submit "参加する", class: "btn btn-primary" %>
+  <%= f.submit "参加しない", class: "btn btn-primary" %>
 <% end %>
 </div>

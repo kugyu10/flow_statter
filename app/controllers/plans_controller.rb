@@ -13,7 +13,7 @@ class PlansController < ApplicationController
   def show
     @user = current_user
     @plan = Plan.find(params[:id])
-    @participations = Participation.where(plan_id: @plan.id)
+    @participations = Participation.where(plan_id: @plan.id, status: 1)
     @current_participation = @participations.find_by(user_id: @user.id)
   end
   

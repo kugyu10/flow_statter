@@ -25,10 +25,8 @@
     <h2>参加</2>
     <div class="row">
     <% if logged_in? %>
-      <%= link_to '参加する', '#', class: "btn btn-primary" %>
-      <%= link_to '参加しない', '#', class: "btn btn-secondary" %>
-      <p></p>
       <%= render 'participation_form' %>
+      <p></p>
     <% else %>
       （参加状態を変更するにはログインして下さい）
     <% end %>
