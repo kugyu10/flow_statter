@@ -24,4 +24,4 @@
 /spring/*.pid
 
 # Ignore API KEY Setting
-/config/secrets.yml
+/.env
