@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180107045506) do
+ActiveRecord::Schema.define(version: 20180421105924) do
 
   create_table "email_users", force: :cascade do |t|
     t.string   "email"
@@ -38,9 +38,10 @@ ActiveRecord::Schema.define(version: 20180107045506) do
     t.integer  "status"
     t.date     "event_date"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.string   "title"
+    t.string   "front_picture"
     t.index ["user_id"], name: "index_plans_on_user_id"
   end
 

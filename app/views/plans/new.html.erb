@@ -16,7 +16,13 @@
       <%= f.label :event_date %>
       <%= f.text_field :event_date, class: 'form-control' %>
       
+      <%= f.label :front_picture %>
+      <span class="picture">
+        <%= f.file_field :front_picture %>
+      </span>
+      
       <%= f.submit "Planを作成する", class: "btn btn-primary" %>
+      
     <% end %>
   </div>
 </div>

@@ -35,8 +35,9 @@ class PlansController < ApplicationController
   
   private 
   
+    #許可リスト
     def plan_params
-      params.require(:plan).permit(:user_id, :title, :content, :status, :event_date )
+      params.require(:plan).permit(:user_id, :title, :content, :status, :event_date, :front_picture )
     end
     
     # ログインしていなかったらログインを要求する

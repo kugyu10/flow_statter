@@ -2,6 +2,9 @@
   <h1>Plans#show</h1>
   <div class="col-md-6 col-md-offset-3">
     <h2>プラン</h2>
+    <span>
+      <%= image_tag @plan.front_picture.url if @plan.front_picture? %>
+    </span>
     <div class="row">plan_id:<%= @plan.id %>,</div>
     <div class="row">プラン内容:<%= @plan.content %>,</div>
     <div class="row">開催日:<%= @plan.event_date %></div>

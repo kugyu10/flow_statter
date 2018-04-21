@@ -3,9 +3,9 @@
     <%= link_to "ふらすたった〜", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "ほーむ", root_path %></li>
         <li><%= link_to "へるぷ", help_path %></li>
-        <li><%= link_to "新規プラン", "/plans/new" %></li>
+        <li><%= link_to "フラスタ企画一覧", "/plans" %></li>
+        <li><%= link_to "新規に企画する", "/plans/new" %></li>
 
         <% if logged_in? %>
           <li><%= image_tag(current_user.image_url, options={ size: 50}) %></li>
@@ -20,7 +20,10 @@
             </ul>
           </li>
         <% else %>
-          <li><%= link_to 'Twitterでログイン', '/auth/twitter' %></li>
+          <li class="dropdown">
+            <li><%= link_to 'Twitterでログイン', '/auth/twitter' %></li>
+            <li><%= link_to 'メアドでログイン', '#' %></li>
+          </li>
         <% end %>
       </ul>
     </nav>
