@@ -23,3 +23,5 @@
 # Ignore Spring files
 /spring/*.pid
 
+# Ignore API KEY Setting
+/config/secrets.yml
