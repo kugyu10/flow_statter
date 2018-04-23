@@ -42,15 +42,19 @@ class PlansCreatingTest < ActionDispatch::IntegrationTest
   
   test 'Plan.createで新planを作成する' do
     log_in_as @admin
+    #画像をつけて新plan作成
+    picture = fixture_file_upload('test/fixtures/rails.png', 'image/png')
     assert_difference 'Plan.count', 1 do
       post plans_path, params: {plan: {
         title: "test3event",
         content: "test3",
         status: 1,
         event_date: Date.today,
-        user_id: @admin.id
+        user_id: @admin.id,
+        front_picture: picture
       }}
     end
+    #assert params[:plan].front_picture?
     follow_redirect!
     assert_template 'plans/show'
   end
